@@ -1,0 +1,2 @@
+# JavaStreams
+Java Streams basics.
