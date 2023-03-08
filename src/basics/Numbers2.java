@@ -11,13 +11,29 @@ public class Numbers2 {
 		// Avoid matching the original array by creating
 		// a copy of the original array
 		int[] copy = Arrays.copyOf(numbers, numbers.length);
+		
+		// Sorting the array (ascending order)
+		Arrays.sort(copy);
 
+		// Picking the first 3 values
 		// Without Java Streams
+		System.out.println("Without Java Streams:");
 		for (int i = 0; i < 3; i++) {
-			System.out.println(copy[i]);
+			System.out.println(copy[i] +  ", ");
 		}
 
 		// With Streams
-		IntStream.of(numbers).distinct().sorted().limit(3).forEach(System.out::println);
+		System.out.println("With Java Streams");
+		// Creating the Stream
+		IntStream.of(numbers)
+				// Processing the Stream
+				.distinct().sorted().limit(3)
+				// Consuming the Stream
+				.forEach(System.out::println);
+		
+		// Is there any odd number in the sequence?
+		IntStream.range(0, 50).anyMatch(x -> x % 2 == 1);
+		// Are all numbers in the sequence odd?
+		IntStream.range(0, 50).allMatch(x -> x % 2 == 1);
 	}
 }
