@@ -1,5 +1,5 @@
 # JavaStreams
-Java Streams basics.
+## Java Streams basics
 
 What is a Stream and how it works?
 ![image](https://user-images.githubusercontent.com/31170255/223879203-27e2c716-a228-4b8f-9abc-1cedb7460bfb.png)
